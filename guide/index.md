@@ -16,6 +16,32 @@
 - ระบบ **เข้าสู่ระบบด้วย Google OAuth เท่านั้น** — ผู้ดูแลคนแรกต้องเป็นอีเมล Google จริงที่ล็อกอินได้ (บัญชีอินเตอร์เน็ตที่ออกโดยมหาวิทยาลัย)
 - โปรเจกต์แยกเป็น **2 ส่วน:** `backend/` และ `frontend/`
 
+## 📥 เตรียมโปรเจกต์ (ดาวน์โหลดโค้ด)
+
+ทั้งแบบ Native และ Docker ต้องมีซอร์สโค้ดในเครื่องก่อน โปรเจกต์แยกเป็น 2 repo:
+
+- Backend: <https://github.com/LeChevalier4869/-Backend-Faculty-of-Engineering-Leave-System>
+- Frontend: <https://github.com/LeChevalier4869/-Frontend-Faculty-of-Engineering-Leave-System>
+
+clone ให้อยู่ในโฟลเดอร์ชื่อ `backend` และ `frontend`:
+
+```bash
+git clone https://github.com/LeChevalier4869/-Backend-Faculty-of-Engineering-Leave-System.git backend
+git clone https://github.com/LeChevalier4869/-Frontend-Faculty-of-Engineering-Leave-System.git frontend
+```
+
+โครงที่ควรได้:
+```
+โฟลเดอร์หลัก/
+├─ backend/
+└─ frontend/
+```
+
+::: warning สำคัญ — ต้องวางข้างกันและชื่อโฟลเดอร์ต้องถูก
+Docker compose อ้าง `../frontend` และคู่มือใช้ `cd backend` / `cd frontend`
+ถ้าชื่อโฟลเดอร์ไม่ตรงหรือไม่ได้อยู่ข้างกัน จะ build/รันไม่ผ่าน
+:::
+
 ## 🗺️ ภาพรวมขั้นตอน (แบบ Native)
 
 | Phase | ทำอะไร | ผลที่ควรได้ |

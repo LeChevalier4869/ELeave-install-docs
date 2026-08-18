@@ -7,7 +7,15 @@
 
 ## สิ่งที่ต้องมี
 - **Docker Desktop** (Windows/Mac) หรือ Docker Engine + Compose plugin (Linux) — เช็ค `docker --version`
-- โฟลเดอร์ `backend/` และ `frontend/` วางข้างกัน (compose อ้าง `../frontend`)
+- **ซอร์สโค้ด** ทั้ง 2 repo (compose build จากซอร์ส ยังไม่ได้ใช้ image สำเร็จรูป)
+
+clone ให้อยู่ในโฟลเดอร์ชื่อ `backend`/`frontend`:
+
+```bash
+git clone https://github.com/LeChevalier4869/-Backend-Faculty-of-Engineering-Leave-System.git backend
+git clone https://github.com/LeChevalier4869/-Frontend-Faculty-of-Engineering-Leave-System.git frontend
+```
+(รายละเอียดเพิ่มเติม: [เตรียมโปรเจกต์](./#prepare))
 
 ## ภาพรวม service
 
