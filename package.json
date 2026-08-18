@@ -1,0 +1,14 @@
+{
+  "name": "eleave-install-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "คู่มือติดตั้งระบบลาออนไลน์ eLeave — คณะวิศวกรรมศาสตร์ มทร.อีสาน วิทยาเขตขอนแก่น",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}

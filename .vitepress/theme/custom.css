@@ -1,0 +1,105 @@
+/* ===== eLeave install docs — ธีมคณะวิศวกรรมศาสตร์ (เลือดหมู-ทอง) ===== */
+
+:root {
+  /* แบรนด์: เลือดหมู #7A1B22 + ทอง #A8842F */
+  --vp-c-brand-1: #7a1b22;
+  --vp-c-brand-2: #8f242c;
+  --vp-c-brand-3: #a8842f;
+  --vp-c-brand-soft: rgba(122, 27, 34, 0.12);
+
+  /* ปุ่ม brand */
+  --vp-button-brand-bg: #7a1b22;
+  --vp-button-brand-hover-bg: #8f242c;
+  --vp-button-brand-active-bg: #6a161c;
+  --vp-button-brand-border: transparent;
+
+  /* Hero (หน้าแรก) — ชื่อไล่สีเลือดหมู→ทอง */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #7a1b22 30%, #a8842f);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #7a1b22 40%, #a8842f);
+  --vp-home-hero-image-filter: blur(48px);
+
+  /* ฟอนต์ไทยอ่านง่าย */
+  --vp-font-family-base: "Sarabun", "Noto Sans Thai", -apple-system, sans-serif;
+}
+
+/* โหมดมืด — ปรับแบรนด์ให้สว่างพอสำหรับลิงก์/หัวข้อบนพื้นเข้ม */
+.dark {
+  --vp-c-brand-1: #e59aa2;
+  --vp-c-brand-2: #d9848d;
+  --vp-c-brand-3: #c99a3f;
+  --vp-c-brand-soft: rgba(229, 154, 162, 0.16);
+}
+
+/* หัวข้อใช้ Kanit ให้ดูเป็นระเบียบกึ่งทางการ */
+h1,
+h2,
+h3,
+h4,
+.VPHero .name,
+.VPHero .text,
+.VPFeature .title {
+  font-family: "Kanit", "Sarabun", sans-serif;
+}
+
+/* เนื้อหาอ่านสบายตาขึ้นเล็กน้อย */
+.vp-doc {
+  line-height: 1.75;
+}
+.vp-doc h2 {
+  margin-top: 2.2rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+/* แอนิเมชันเบา ๆ ตอนเข้าหน้า (ไม่หน่วงเครื่อง) */
+@media (prefers-reduced-motion: no-preference) {
+  .VPContent .vp-doc,
+  .VPHero .container,
+  .VPFeatures .items {
+    animation: eleave-fade-in 0.45s ease both;
+  }
+  .VPFeature {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .VPFeature:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(122, 27, 34, 0.12);
+  }
+}
+@keyframes eleave-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* แถบ badge เวอร์ชัน/แท็ก ให้เข้าโทน */
+.VPBadge.tip {
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+/* Checkpoint = กล่อง tip พื้นหลังเขียว (ไม่งั้นจะเป็นสี brand เลือดหมู) ดูสะอาด modern */
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: #166534;
+  --vp-custom-block-tip-bg: rgba(34, 197, 94, 0.1);
+  --vp-custom-block-tip-code-bg: rgba(34, 197, 94, 0.18);
+}
+.dark {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: #bbf7d0;
+  --vp-custom-block-tip-bg: rgba(34, 197, 94, 0.14);
+  --vp-custom-block-tip-code-bg: rgba(34, 197, 94, 0.22);
+}
+.vp-doc .custom-block.tip {
+  border-radius: 10px;
+}
+.vp-doc .custom-block.tip .custom-block-title {
+  font-family: "Kanit", sans-serif;
+}
